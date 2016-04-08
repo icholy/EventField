@@ -1,0 +1,23 @@
+{
+  "name": "EventField",
+  "version": "1.0.0",
+  "homepage": "https://github.com/icholy/EventField",
+  "authors": [
+    "Ilia Choly"
+  ],
+  "typescript": {
+    "definition": "build/EventField.d.ts"
+  },
+  "description": "Event Field",
+  "main": "build/EventField.js",
+  "keywords": [
+    "events"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {}
+}

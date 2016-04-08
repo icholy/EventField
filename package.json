@@ -1,0 +1,23 @@
+{
+  "name": "EventField",
+  "version": "1.0.0",
+  "description": "Event Field",
+  "main": "build/EventField.js",
+  "typescript": {
+    "definition": "build/EventField.d.ts"
+  },
+  "author": "Ilia Choly",
+  "license": "MIT",
+  "repository": "https://github.com/icholy/EventField.git",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-tslint": "^1.4.4",
+    "gulp-typedoc": "^1.1.0",
+    "gulp-typescript": "^2.4.2",
+    "gulp-uglify": "^1.1.0",
+    "merge-stream": "^0.1.7",
+    "rimraf": "^2.3.2"
+  }
+}
