@@ -11,13 +11,13 @@ class MyThing {
   public FooEvent = new EventField<string>();
 
   constructor() {
-    setInterval(_ => this.FooEvent.trigger("foo"), 1000);
+    setInterval(_ => this.FooEvent.emit("foo"), 1000);
   }
 }
 
 let thing = new MyThing();
 
-thing.FooEvent.addListener((payload) => {
+thing.FooEvent.on((payload) => {
   console.log(payload);
 });
 
