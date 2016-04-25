@@ -47,7 +47,7 @@ class EventField<PayloadT> {
   un(listener: EventFieldListener<PayloadT>): void {
     let index = this.listeners.indexOf(listener);
     if (index !== -1) {
-      this.listeners.splice(index);
+      this.listeners.splice(index, 1);
     }
   }
 
