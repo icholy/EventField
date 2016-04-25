@@ -1,6 +1,6 @@
 {
   "name": "EventField",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Event Field",
   "main": "build/EventField.js",
   "typescript": {
