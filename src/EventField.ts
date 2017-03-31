@@ -3,17 +3,15 @@ interface EventFieldListener<PayloadT> {
   (payload: PayloadT): void;
 }
 
-class EventFieldListenerGroup<PayloadT> {
+class EventFieldListenerGroup {
 
   private unbinds: Function[] = [];
-
-  constructor(private field: EventField<PayloadT>) {}
 
   /**
    * Register a listener in the group
    */
-  on(listener: EventFieldListener<PayloadT>): void {
-    let unbind = this.field.on(listener);
+  on<T>(field: EventField<T>, listener: EventFieldListener<T>): void {
+    let unbind = field.on(listener);
     this.unbinds.push(unbind);
   }
 
