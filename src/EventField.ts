@@ -10,7 +10,7 @@ class EventFieldListenerGroup {
   /**
    * Register a listener in the group
    */
-  on<T>(field: EventField<T>, listener: EventFieldListener<T>): void {
+  on<PayloadT>(field: EventField<PayloadT>, listener: EventFieldListener<PayloadT>): void {
     let unbind = field.on(listener);
     this.unbinds.push(unbind);
   }
@@ -56,5 +56,12 @@ class EventField<PayloadT> {
     for (let listener of this.listeners) {
       listener(payload);
     }
+  }
+
+  /**
+   * Helper method for creating a group of listeners
+   */
+  static group(): EventFieldListenerGroup {
+    return new EventFieldListenerGroup();
   }
 }
