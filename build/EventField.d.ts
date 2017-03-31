@@ -1,14 +1,12 @@
 interface EventFieldListener<PayloadT> {
     (payload: PayloadT): void;
 }
-declare class EventFieldListenerGroup<PayloadT> {
-    private field;
+declare class EventFieldListenerGroup {
     private unbinds;
-    constructor(field: EventField<PayloadT>);
     /**
      * Register a listener in the group
      */
-    on(listener: EventFieldListener<PayloadT>): void;
+    on<PayloadT>(field: EventField<PayloadT>, listener: EventFieldListener<PayloadT>): void;
     /**
      * Unregister all listeners in the group
      */
@@ -28,4 +26,8 @@ declare class EventField<PayloadT> {
      * Invoke the registered listeners with the provided payload
      */
     emit(payload: PayloadT): void;
+    /**
+     * Helper method for creating a group of listeners
+     */
+    static group(): EventFieldListenerGroup;
 }
