@@ -27,7 +27,7 @@ class EventFieldListenerGroup {
   
 }
 
-class EventField<PayloadT> {
+class EventField<PayloadT = {}> {
 
   private listeners: EventFieldListener<PayloadT>[] = [];
 
